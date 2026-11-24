@@ -3,7 +3,7 @@ import './Header.css'
 function Header() {
   return (
     <header className="header">
-      <h1>Minha Primeira Aplicação React</h1>
+      <h1>Oii, sou Thaís!</h1>
     </header>
   )
 }

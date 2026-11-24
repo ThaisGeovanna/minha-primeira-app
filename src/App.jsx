@@ -4,32 +4,36 @@ import Card from './components/Card/Card'
 import Lista from './components/Lista/Lista'
 
 function App() {
-  const tecnologias = ['HTML', 'CSS', 'JavaScript', 'React', 'Vite']
+  const hobbies = ['[Pintura]', '[Música]', '[Filmes]', '[Leitura]']
+  const tecnologias = ['HTML', 'CSS', 'JavaScript', 'React', 'Vite', 'Git e GitHub']
 
   return (
     <>
       <Header />
 
-      <main style={{ display: 'flex', gap: '20px', padding: '20px', flexWrap: 'wrap' }}>
+      <main style={{ display: 'flex', gap: '20px', padding: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
         <Card
-          titulo="React"
-          descricao="Biblioteca JavaScript para criar interfaces."
-          imagem="https://placehold.co/250x150?text=React"
+          titulo="Sobre mim"
+          descricao="Me chamo Thaís, moro em São Luís - MA e estou começando minha jornada no desenvolvimento web."
+          imagem="https://placehold.co/250x150?text=Sobre+mim"
         />
         <Card
-          titulo="Vite"
-          descricao="Ferramenta de build rápida para projetos web."
-          imagem="https://placehold.co/250x150?text=Vite"
+          titulo="Meus estudos"
+          descricao="Atualmente estudo engenharia de software no Ceuma e estou aprendendo React."
+          imagem="https://placehold.co/250x150?text=Estudos"
         />
         <Card
-          titulo="JSX"
-          descricao="Sintaxe que mistura JavaScript e HTML."
-          imagem="https://placehold.co/250x150?text=JSX"
+          titulo="Meus objetivos"
+          descricao="Quero ganhar muito dinheiro e construir projetos que resolvam problemas reais."
+          imagem="https://placehold.co/250x150?text=Objetivos"
         />
       </main>
 
-      <section style={{ padding: '0 20px' }}>
-        <h2>Tecnologias que estou estudando</h2>
+      <section style={{ padding: '0 20px 20px' }}>
+        <h2>Meus hobbies</h2>
+        <Lista itens={hobbies} />
+
+        <h2>Tecnologias que estou aprendendo</h2>
         <Lista itens={tecnologias} />
       </section>
 
