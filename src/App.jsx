@@ -1,44 +1,35 @@
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
+import Button from './components/Button/Button'
+import Badge from './components/Badge/Badge'
+import Input from './components/Input/Input'
 import Card from './components/Card/Card'
-import Lista from './components/Lista/Lista'
+import Alert from './components/Alert/Alert'
 
 function App() {
-  const hobbies = ['Pintura', 'Música', 'Filmes', 'Leitura']
-  const tecnologias = ['HTML', 'CSS', 'JavaScript', 'React', 'Vite', 'Git e GitHub']
-
   return (
-    <>
-      <Header />
+    <div className="p-8 space-y-6 bg-gray-50 min-h-screen">
+      <h1 className="text-3xl font-bold">Mini Biblioteca UI</h1>
 
-      <main style={{ display: 'flex', gap: '20px', padding: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
-        <Card
-          titulo="Sobre mim"
-          descricao="Eu me chamo Thaís, moro em São Luís - MA e estou começando minha jornada no desenvolvimento web."
-          
-        />
-        <Card
-          titulo="Meus estudos"
-          descricao="Atualmente estudo engenharia de software no Ceuma e estou aprendendo React."
-        
-        />
-        <Card
-          titulo="Meus objetivos"
-          descricao="Quero ganhar muito dinheiro e construir projetos que resolvam problemas reais."
-        
-        />
-      </main>
+      <div className="flex gap-3">
+        <Button variant="primary">Primário</Button>
+        <Button variant="secondary">Secundário</Button>
+        <Button variant="danger">Perigo</Button>
+      </div>
 
-      <section style={{ padding: '0 20px 20px' }}>
-        <h2>Meus hobbies</h2>
-        <Lista itens={hobbies} />
+      <div className="flex gap-2">
+        <Badge cor="blue">Novo</Badge>
+        <Badge cor="green">Ativo</Badge>
+        <Badge cor="red">Erro</Badge>
+        <Badge cor="yellow">Pendente</Badge>
+      </div>
 
-        <h2>Tecnologias que estou aprendendo</h2>
-        <Lista itens={tecnologias} />
-      </section>
+      <Input label="Nome" placeholder="Digite seu nome" />
 
-      <Footer />
-    </>
+      <Card titulo="Exemplo" descricao="Card estilizado/feito com Tailwind" imagem="https://picsum.photos/400/200" />
+
+      <Alert variant="success">Operação realizada com sucesso!!</Alert>
+      <Alert variant="error">Algo deu errado.</Alert>
+      <Alert variant="warning">Atenção a este aviso.</Alert>
+    </div>
   )
 }
 
